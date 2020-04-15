@@ -38,7 +38,6 @@ if($Title=='')$Title='Code Editor';
 	<nav>
 		<a href="javascript:void(0)" class="newButton">New</a>
 		<a href="javascript:void(0)" class="uploadButton">Upload</a> 
-		<a href="http://tutorialgo.in/">Back to Website</a>
 	</nav>
 </header>
 <?php
