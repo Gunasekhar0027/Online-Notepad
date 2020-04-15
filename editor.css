@@ -1,0 +1,270 @@
+body {
+    font-family: sans-serif;
+    font-size: 25px;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+input[type="text"] {
+    border: 1px solid #444;
+}
+
+header nav a {
+    float: left;
+    padding: 6px 7px;
+    color: #444;
+}
+
+header nav a:hover {
+    background-color: #aaa;
+}
+
+header nav:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+header nav .active {
+    font-weight: bold;
+}
+
+form {
+    display: none;
+    border-top: 1px solid #444;
+    padding: 10px;
+}
+
+form .fieldRow {
+    margin-bottom: 5px;
+}
+
+pre {
+    margin: 0 0 10px;
+}
+
+input[readonly] {
+    background-color: #ddd;
+    opacity: 0.3;
+}
+
+#list {
+    border-bottom: 1px solid #444;
+    font-weight: bold;
+}
+
+#list>div {
+    width: 100%;
+    border-top: 1px solid #444;
+    display: table;
+}
+
+#list>div>* {
+    display: table-cell;
+    padding: 2px 0 2px 3px;
+}
+
+#list>div>a .indent {
+    margin-left: 10px;
+}
+
+#list>div.bad {
+    text-decoration: line-through;
+}
+
+
+
+#list .dir .paste {
+    display: none;
+}
+
+#list .remove-clip {
+    width: 16px;
+    min-width: 16px;
+    background-size: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    background-image: url('//cdnjs.cloudflare.com/ajax/libs/fatcow-icons/20130425/FatCow_Icons32x32/delete.png');
+}
+
+#list .del {
+    width: 26px;
+    min-width: 26px;
+    background-size: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    background-image: url('//cdnjs.cloudflare.com/ajax/libs/fatcow-icons/20130425/FatCow_Icons32x32/delete.png');
+}
+
+#list .del:not([onclick]) {
+    display: none;
+}
+
+#list .direct {
+    width: 16px;
+    min-width: 16px;
+    background-size: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    background-image: url('//cdnjs.cloudflare.com/ajax/libs/fatcow-icons/20130425/FatCow_Icons32x32/world_go.png');
+}
+
+#list .direct[href=""] {
+    display: none;
+}
+
+#list .dl {
+    width: 26px;
+    min-width: 26px;
+    background-size: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    background-image: url('//cdnjs.cloudflare.com/ajax/libs/fatcow-icons/20130425/FatCow_Icons32x32/inbox_download.png');
+}
+
+#list>div:nth-of-type(odd) {
+    background-color: #dfd;
+}
+
+#list>div:hover {
+    background-color: #ddd;
+}
+
+#list>div:nth-of-type(odd):hover {
+    background-color: #ddd;
+}
+
+#list .seg:hover {
+    text-decoration: underline;
+    color: #444 !important;
+}
+
+#list .seg[href=""]:hover {
+    text-decoration: none;
+    color: #ccc !important;
+}
+
+#list .dir {
+    cursor: pointer;
+}
+
+#list .file {
+    cursor: pointer;
+}
+
+#list .filepath .slash {
+    color: #bbb;
+}
+
+#list .dir .filepath,
+#list .dir .seg {
+    color: #bb0;
+}
+
+#list .file .filepath,
+#list .file .seg {
+    color: #1b0;
+}
+
+#list .file .seg.d {
+    color: #bb0;
+}
+
+#list .seg[href=""] {
+    color: #ccc;
+    cursor: default;
+}
+
+/* File editing disabled - too large to edit */
+#list .size {
+    color: #bbb;
+    margin-left: 5px;
+    font-size: 10px;
+    width: 100px;
+}
+
+#list .dir .size:after {
+    content: " files";
+}
+
+#list .age:after {
+    content: " old";
+}
+
+#list .age {
+    color: #bbb;
+    font-size: 10px;
+    width: 100px;
+}
+
+/*@media (max-width:979px){
+	body{font-size:12px;}
+	#list>div>*{display:block;padding-bottom:0;}
+	#list .size{float:left;height:16px;height:auto;padding:0 0 4px;}
+	#list .age{float:left;height:16px;height:auto;padding:0 0 4px;}
+	#list .direct,#list .dl,#list .del,#list .cut,#list .copy,#list .paste,#list .remove-clip{float:right;height:34px;width:34px;margin-top:-18px;padding:0;}
+	#list .filepath{width:calc(100% - 132px);}
+}*/
+
+@media (max-width:979px) {
+    body {
+        font-size: 12px;
+    }
+
+    #list>div>* {
+        display: block;
+        padding-bottom: 0;
+    }
+
+    #list .size {
+        float: left;
+        height: 16px;
+        height: auto;
+        padding: 0 0 4px;
+    }
+
+    #list .age {
+        float: left;
+        height: 16px;
+        height: auto;
+        padding: 0 0 4px;
+    }
+
+    #list .direct,
+    #list .dl,
+    #list .del,
+    #list .cut,
+    #list .copy,
+    #list .paste,
+    #list .remove-clip {
+        float: right;
+        height: 27px;
+        width: 27px;
+        padding: 0;
+    }
+}
+
+button {
+    border: 2px;
+    margin-top: 5px;
+    font-size: 25px;
+}
+
+#editor {
+    margin-top: 40px;
+    border: 2px solid black;
+    position: absolute;
+    font-size: 20px;
+    color: black;
+    top: 0;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+}
